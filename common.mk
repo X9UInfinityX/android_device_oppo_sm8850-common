@@ -36,26 +36,28 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.common-V1-ndk.vendor \
+    android.hardware.audio.core-V3-ndk.vendor \
     android.hardware.audio.core.sounddose-V1-ndk.vendor \
+    android.hardware.audio.core.sounddose-V3-ndk.vendor \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
     libalsautilsv2.vendor \
+    libaudioutils_shim \
     libbatterylistener \
-    libmediautils_vendor.vendor \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libtinycompress \
-    libtinyalsav2 \
-    libvolumelistener \
+    libbluetooth_audio_session_aidl_shim \
     libbundleaidl \
     libdownmixaidl \
     libdynamicsprocessingaidl \
     libloudnessenhanceraidl \
+    libmediautils_vendor.vendor \
+    libmemunreachable.vendor \
     libreverbaidl \
+    libtinyalsav2 \
+    libtinycompress \
     libv4a_aidl \
     libvisualizeraidl \
+    qti-audio-types-aidl-V1-ndk.vendor \
     qtiaudiohalvendorextn
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8850/audio/primary-hal
