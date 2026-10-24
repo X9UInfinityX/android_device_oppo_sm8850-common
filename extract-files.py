@@ -50,7 +50,7 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'odm/bin/hw/vendor.oplus.hardware.charger-V11-service': blob_fixup()
+    'odm/bin/hw/vendor.oplus.hardware.charger-V12-service': blob_fixup()
         .binary_regex_replace(
             b'/data/%d-%02d-%02d_%02d-%02d-%02d_bcc.csv',
             b'/data/vendor/battery/%d-%02d-%02d_bcc.csv',
@@ -93,11 +93,6 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'DEBUG_LEVEL = 3', b'DEBUG_LEVEL = 2'),
     'odm/etc/init/init.network.rc': blob_fixup()
         .regex_replace(r'/\* (Huo\.Chen@SYSTEM\.RF, 2024/09/06, Add for ICC) \*/', r'# \1'),
-    'odm/lib64/libqti-radio-service.so': blob_fixup()
-        .replace_needed(
-            'vendor.oplus.hardware.subsys_radio-V9-ndk.so',
-            'vendor.oplus.hardware.subsys_radio-V10-ndk.so',
-        ),
     (
         'vendor/bin/hw/vendor.qti.media.c2@1.0-service',
         'vendor/bin/hw/vendor.qti.media.c2audio@1.0-service',
@@ -105,8 +100,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.media.c2-V1-ndk.so', 'android.hardware.media.c2-V2-ndk.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
-    'system_ext/bin/horae': blob_fixup()
-        .replace_needed('libprotobuf-cpp-lite.so', 'libprotobuf-cpp-lite-21.12.so'),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V4-cpp.so',
