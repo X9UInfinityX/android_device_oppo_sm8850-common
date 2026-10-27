@@ -32,8 +32,13 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
 
+def lib_fixup_stock_volume_listener(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_stock' if partition == 'vendor' else None
+
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    'libvolumelistener': lib_fixup_stock_volume_listener,
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'libolc_vnd',
