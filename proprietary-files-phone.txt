@@ -116,19 +116,6 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/vendor.qti.hardware.embmsslaidl-V2-ndk.so
 
-# Data (IPACM)
-vendor/bin/ipacm
-vendor/bin/ipacm-diag
-vendor/etc/init/ipacm-diag.rc
-vendor/etc/init/ipacm.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.tetheroffload.service.xml
-vendor/etc/IPACM_Filter_cfg.xml
-vendor/etc/IPACM_cfg.xml
-vendor/lib64/libipanat.so
-vendor/lib64/libnetfilter_conntrack.so
-vendor/lib64/libnfnetlink.so
-vendor/lib64/liboffloadhal.so
-
 # DPM
 system_ext/bin/dpmd
 system_ext/bin/tcmd
@@ -503,6 +490,9 @@ vendor/lib64/vendor.qti.hardware.radio.qtiradioconfig-V6-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server-V1-ndk.so
+
+# RIL - Oplus radio AIDL V4
+vendor/lib64/vendor.oplus.hardware.radio-V4-ndk.so
 
 # RIL - UIM
 product/app/uimgbaservice/uimgbaservice.apk

@@ -55,6 +55,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace(r'sensors\.qsh\.so', 'sensors.fusionlight.so'),
     'odm/bin/hw/vendor.oplus.hardware.charger-V12-service': blob_fixup()
         .binary_regex_replace(
             b'/data/%d-%02d-%02d_%02d-%02d-%02d_bcc.csv',
